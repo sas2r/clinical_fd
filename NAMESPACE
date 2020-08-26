@@ -2,7 +2,9 @@
 
 export(hello)
 export(printer)
+export(s_read)
 importFrom(dplyr,select)
+importFrom(readr,read_csv)
 importFrom(tibble,data_frame)
 importFrom(utils,adist)
 importFrom(utils,head)

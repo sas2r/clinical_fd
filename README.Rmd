@@ -22,33 +22,76 @@ The goal of clinicalfd is to create Fake SDTM/ADaM data for generating TFL.
 
 ## Installation
 
-You can install the released version of clinicalfd from [CRAN](https://CRAN.R-project.org) with:
+You can install the released version of clinicalfd (clinical fake data) from [CRAN](https://CRAN.R-project.org) with:
 
-``` r
-install.packages("clinicalfd")
+ 
+The way to install this package is 
+when you open the R-studio in Console 
+
+install.packages("devtools")  wait for the dev tools to be installed 
+ then call the library(devtools). Once the devtools is installed then you can call install_github("sas2r/clinical_fd")  to 
+install the package clinical_fd  (all lower case , with the underscore in it  ) then call library(clincalfd) (without the underscore)
+
+```{r example}
+#install.packages("devtools") 
+
+library(devtools)
+
+#install_github("sas2r/clinical_fd")
+
+library(clinicalfd)
+## basic example code
 ```
+Once you have the clinicalfd installed you can start calling the SDTM datasets
+List of SDTM Data sets available in ‘clinicalfd’ package are:
+
+ae               
+cm               
+dm               
+ds              
+ex              
+lbch            
+lbhe            
+mh              
+qsco            
+qsda            
+qsgi            
+qshi            
+relrec          
+sc              
+se              
+suppae          
+suppdm          
+suppds          
+supplbch        
+supplbur        
+sv              
+ta              
+te              
+ti              
+ts              
+tv              
+vs  
 
 ## Example
 
 This is a basic example which shows you how to solve a common problem:
 
-```{r example}
-library(clinicalfd)
-## basic example code
+```{r cars}
+summary(dm)
+```
+
+
+
+You can also embed plots, for example:
+
+```{r gender, echo = FALSE}
+race <- dplyr::select(dm , race, age)
+plot(race )
 ```
 
 What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
 
-```{r cars}
-summary(cars)
-```
-
 You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date.
-
-You can also embed plots, for example:
-
-```{r pressure, echo = FALSE}
-plot(pressure)
-```
 
 In that case, don't forget to commit and push the resulting figure files, so they display on GitHub!

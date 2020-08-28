@@ -140,6 +140,10 @@ summary(dplyr::select(adsl, age, sex , race, ethnic))
 
 You can also embed plots, for example:
 
+``` r
+plot(dplyr::select(dm , sex, age) )
+```
+
 <img src="man/figures/README-gender-1.png" width="100%" />
 
 What is special about using `README.Rmd` instead of just `README.md`?

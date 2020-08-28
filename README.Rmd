@@ -105,7 +105,7 @@ SDTM:
 
 This is a basic example which shows you how to solve a common problem:
 
-```{r cars}
+```{r cars , echo = TRUE }
 #from SDTM
 summary(dplyr::select(dm, age, sex , race, ethnic))
 #from ADaM
@@ -114,7 +114,7 @@ summary(dplyr::select(adsl, age, sex , race, ethnic))
 
 You can also embed plots, for example:
 
-```{r gender, echo = FALSE}
+```{r gender, echo = TRUE}
 plot(dplyr::select(dm , sex, age) )
 ```
 

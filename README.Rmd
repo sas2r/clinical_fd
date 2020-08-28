@@ -56,50 +56,66 @@ library(clinicalfd)
 ```
 
 
-Once you have the clinicalfd installed you can start calling the SDTM datasets
-List of SDTM Data sets available in ‘clinicalfd’ package are:
+List of ADaM/SDTM Data sets available in ‘clinicalfd’ package are:
 
-ae               
-cm               
-dm               
-ds              
-ex              
-lbch            
-lbhe            
-mh              
-qsco            
-qsda            
-qsgi            
-qshi            
-relrec          
-sc              
-se              
-suppae          
-suppdm          
-suppds          
-supplbch        
-supplbur        
-sv              
-ta              
-te              
-ti              
-ts              
-tv              
-vs  
+ADaM: 
+    adadas         
+    adae           
+    adcibc         
+    adlbc          
+    adlbcpv        
+    adlbh          
+    adlbhpv        
+    adlbhy         
+    adnpix         
+    adsl           
+    adtte          
+    advs 
 
+SDTM: 
+    ae               
+    cm               
+    dm               
+    ds              
+    ex              
+    lbch            
+    lbhe            
+    mh              
+    qsco            
+    qsda            
+    qsgi            
+    qshi            
+    relrec          
+    sc              
+    se              
+    suppae          
+    suppdm          
+    suppds          
+    supplbch        
+    supplbur        
+    sv              
+    ta              
+    te              
+    ti              
+    ts              
+    tv              
+    vs  
+    
 ## Example
 
 This is a basic example which shows you how to solve a common problem:
 
 ```{r cars}
-summary(dm)
+#from SDTM
+summary(dplyr::select(dm, age, sex , race, ethnic))
+#from ADaM
+summary(dplyr::select(adsl, age, sex , race, ethnic))
 ```
 
 You can also embed plots, for example:
 
 ```{r gender, echo = FALSE}
-race <- dplyr::select(dm , race, age)
-plot(race )
+plot(dplyr::select(dm , sex, age) )
 ```
 
 What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:

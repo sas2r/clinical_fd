@@ -56,10 +56,22 @@ library(clinicalfd)
 ## basic example code
 ```
 
-Once you have the clinicalfd installed you can start calling the SDTM
-datasets List of SDTM Data sets available in ‘clinicalfd’ package are:
+List of ADaM/SDTM Data sets available in ‘clinicalfd’ package are:
 
-ae  
+ADaM: adadas  
+adae  
+adcibc  
+adlbc  
+adlbcpv  
+adlbh  
+adlbhpv  
+adlbhy  
+adnpix  
+adsl  
+adtte  
+advs
+
+SDTM: ae  
 cm  
 dm  
 ds  
@@ -92,63 +104,38 @@ vs
 This is a basic example which shows you how to solve a common problem:
 
 ``` r
-summary(dm)
-#>          studyid    domain     usubjid             subjid         
-#>  CDISCPILOT01:306   DM:306   Length:306         Length:306        
-#>                              Class1:labelled    Class1:labelled   
-#>                              Class2:character   Class2:character  
-#>                              Mode  :character   Mode  :character  
-#>                                                                   
-#>                                                                   
-#>                                                                   
-#>    rfstdtc            rfendtc            rfxstdtc           rfxendtc        
-#>  Length:306         Length:306         Length:306         Length:306        
-#>  Class1:labelled    Class1:labelled    Class1:labelled    Class1:labelled   
-#>  Class2:character   Class2:character   Class2:character   Class2:character  
-#>  Mode  :character   Mode  :character   Mode  :character   Mode  :character  
-#>                                                                             
-#>                                                                             
-#>                                                                             
-#>  rficdtc   rfpendtc                dthdtc    dthfl       siteid   
-#>  :306    Length:306                   :303    :303   701    : 51  
-#>          Class1:labelled    2013-01-14:  1   Y:  3   710    : 38  
-#>          Class2:character   2013-08-02:  1           708    : 32  
-#>          Mode  :character   2014-11-01:  1           716    : 29  
-#>                                                      704    : 25  
-#>                                                      709    : 23  
-#>                                                      (Other):108  
-#>       age           ageu     sex                                   race    
-#>  Min.   :50.00   YEARS:306   F:179   AMERICAN INDIAN OR ALASKA NATIVE:  2  
-#>  1st Qu.:70.25               M:127   ASIAN                           :  2  
-#>  Median :77.00                       BLACK OR AFRICAN AMERICAN       : 29  
-#>  Mean   :75.09                       WHITE                           :273  
-#>  3rd Qu.:81.00                                                             
-#>  Max.   :89.00                                                             
-#>                                                                            
-#>                     ethnic         armcd                      arm    
-#>  HISPANIC OR LATINO    : 17   Pbo     :86   Placebo             :86  
-#>  NOT HISPANIC OR LATINO:289   Scrnfail:52   Screen Failure      :52  
-#>                               Xan_Hi  :84   Xanomeline High Dose:84  
-#>                               Xan_Lo  :84   Xanomeline Low Dose :84  
-#>                                                                      
-#>                                                                      
-#>                                                                      
-#>      actarmcd                   actarm   country      dmdtc          
-#>  Pbo     :86   Placebo             :86   USA:306   Length:306        
-#>  Scrnfail:52   Screen Failure      :52             Class1:labelled   
-#>  Xan_Hi  :72   Xanomeline High Dose:72             Class2:character  
-#>  Xan_Lo  :96   Xanomeline Low Dose :96             Mode  :character  
-#>                                                                      
-#>                                                                      
-#>                                                                      
-#>       dmdy    
-#>  Min.   :-37  
-#>  1st Qu.:-14  
-#>  Median :-10  
-#>  Mean   :-11  
-#>  3rd Qu.: -7  
-#>  Max.   : -2  
-#>  NA's   :52
+#from SDTM
+summary(dplyr::select(dm, age, sex , race, ethnic))
+#>       age        sex                                   race    
+#>  Min.   :50.00   F:179   AMERICAN INDIAN OR ALASKA NATIVE:  2  
+#>  1st Qu.:70.25   M:127   ASIAN                           :  2  
+#>  Median :77.00           BLACK OR AFRICAN AMERICAN       : 29  
+#>  Mean   :75.09           WHITE                           :273  
+#>  3rd Qu.:81.00                                                 
+#>  Max.   :89.00                                                 
+#>                     ethnic   
+#>  HISPANIC OR LATINO    : 17  
+#>  NOT HISPANIC OR LATINO:289  
+#>                              
+#>                              
+#>                              
+#> 
+#from ADaM
+summary(dplyr::select(adsl, age, sex , race, ethnic))
+#>       age        sex                                   race    
+#>  Min.   :51.00   F:143   AMERICAN INDIAN OR ALASKA NATIVE:  1  
+#>  1st Qu.:70.00   M:111   BLACK OR AFRICAN AMERICAN       : 23  
+#>  Median :77.00           WHITE                           :230  
+#>  Mean   :75.09                                                 
+#>  3rd Qu.:81.00                                                 
+#>  Max.   :89.00                                                 
+#>                     ethnic   
+#>  HISPANIC OR LATINO    : 12  
+#>  NOT HISPANIC OR LATINO:242  
+#>                              
+#>                              
+#>                              
+#> 
 ```
 
 You can also embed plots, for example:

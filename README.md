@@ -16,7 +16,7 @@ public use see the licence here
 ## Installation
 
 You can install the released version of clinicalfd (clinical fake data)
-from [Github](https://github.com/sas2r/clinical_fd)
+from \[Github\] (<https://github.com/sas2r/clinical_fd>)
 
 General Instructions:
 
@@ -55,6 +55,31 @@ library(devtools)
 library(clinicalfd)
 ## basic example code
 ```
+
+(Please see dataguide in man folder for more information ) Where to Find
+Key Data
+
+Demographics and Populations
+
+The ADSL (Subject Level Analysis Data) dataset contains all
+subject-level variables for demographics, subject characteristics, and
+population flags. Safety Key safety data are found in the datasets ADAE
+(Adverse Events Analysis Data), ADLBC (Laboratory Results Chemistry
+Analysis Data), ADLBH (Laboratory Results Hematology Analysis Data),
+ADLBHY (Laboratory Results Hy’s Rule Analysis Data), and ADVS (Vital
+Signs Analysis Dataset). In addition, ADTTE is specifically for safety
+analyses of the time to the first dermatologic AE. Dermatologic AEs are
+considered an adverse event of special interest.
+
+Efficacy Study CDISCPilot01 has two primary endpoints, the Alzheimer’s
+Disease Assessment Scale - Cognitive Subscale, total of 11 items
+\[ADAS-Cog (11)\] at Week 24 and the Video-referenced Clinician’s
+Interview-based Impression of Change (CIBIC+) at Week 24. All ADAS-Cog
+data, including the first primary endpoint, can be found in the dataset
+ADQSADAS. All CIBIC+ data, including the second primary endpoint, can be
+found in the dataset ADQSCIBC. Mean Revised Neuropsychiatric Inventory
+(NPI-X) data are considered secondary. These data can be found in the
+dataset ADQSNPIX.
 
 List of ADaM/SDTM Data sets available in ‘clinicalfd’ package are:
 

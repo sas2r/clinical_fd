@@ -21,15 +21,25 @@ from \[Github\] (<https://github.com/sas2r/clinical_fd>)
 General Instructions:
 
 Make sure you have lateset version of R-language , the way to check is
-session() . If it 0.4.7 then the Package may not be loaded. To take care
-of that is
+type in  
+session() in R console .
 
-If you are R studio on Personnel drive then first Install.packages
-(“rlang”) , then library (rlang) , check sessionInfo () NOTE: If you
-are using Rstudio on cloud this may would not work , simply go to right
-most corner of the window and change the R version to 4.0 or 4.1.
+If it \<= 0.4.7 then the Package may not be loaded, you need to have \>=
+0.4.7.
 
-The way to install this package is In the R-studio in Console
+To update the R-version
+
+If R studio is on your Personnel drive then do Install.packages
+(“rlang”) , then library (rlang) , check sessionInfo ()
+
+NOTE: If you are using Rstudio on cloud this would not work , On R-cloud
+simply go to right most corner of the window and change the R version to
+either 4.0 or 4.1.
+
+Once you have updated the R-languge then
+
+<B>NOTE: devtools and clinical\_fd would install couple of standard
+packages and would take some time
 
 install.packages(“devtools”) wait for the dev tools to be installed then
 call the library(devtools). Once the devtools is installed then you can
@@ -42,7 +52,7 @@ the System) you will see couple of packages either been downloaded or
 updated.
 
 NOTE: Make sure you type in exactly as shown below without \# for
-install packages part
+install packages part </B>
 
 ``` r
 #install.packages("devtools") 

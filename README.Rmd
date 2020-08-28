@@ -27,22 +27,32 @@ You can install the released version of clinicalfd (clinical fake data) from [Gi
 
 General Instructions:
 
-Make sure you have lateset version of R-language , the way to check is 
-session() . If it 0.4.7 then the Package may not be loaded. To take care of that is 
+Make sure you have lateset version of R-language , the way to check is type in  
+session() in R console .
 
-If you are R studio on Personnel drive then
-first Install.packages ("rlang") , then library (rlang) , check sessionInfo ()
-NOTE: If you are using Rstudio on cloud this may would not work , simply go to right most corner of the window and change the R version to 4.0 or 4.1. 
+If it <= 0.4.7 then the Package may not be loaded, you need to have >= 0.4.7.
 
-The way to install this package is In the R-studio in Console 
+To update the R-version 
 
-install.packages("devtools")  wait for the dev tools to be installed 
+If R studio is on your Personnel drive then do
+ Install.packages ("rlang") ,
+ then library (rlang) ,
+ check sessionInfo ()
+
+NOTE: If you are using Rstudio on cloud this would not work , On R-cloud simply go to right most corner of the window and change the R version to either 4.0 or 4.1. 
+
+Once you have updated the R-languge then 
+
+<B>NOTE: devtools and clinical_fd would install couple of standard packages and would take some time 
+
+install.packages("devtools")   wait for the dev tools to be installed 
  then call the library(devtools). Once the devtools is installed then you can call install_github("sas2r/clinical_fd")  to 
 install the package clinical_fd  (all lower case , with the underscore in it  ) then call library(clincalfd) (without the underscore)
 
 During the process of Installation ( May take around 10 min depending on the System) you will see couple of packages either been downloaded or updated. 
 
 NOTE: Make sure you type in exactly as shown below without # for install packages part
+</B>
 
 ```{r example}
 #install.packages("devtools") 

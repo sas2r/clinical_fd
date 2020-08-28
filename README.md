@@ -1,27 +1,48 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# clinicalfd
+# clinicalfd (Clinical Fake Data)
 
 <!-- badges: start -->
 
 <!-- badges: end -->
 
 The goal of clinicalfd is to create Fake SDTM/ADaM data for generating
-TFL.
+TFL.This data is available at
+(<https://github.com/phuse-org/phuse-scripts>) for free to download for
+public use see the licence here
+(<https://github.com/phuse-org/phuse-scripts/blob/master/LICENSE.md>)
 
 ## Installation
 
 You can install the released version of clinicalfd (clinical fake data)
-from [CRAN](https://CRAN.R-project.org) with:
+from [Github](https://github.com/sas2r/clinical_fd)
 
-The way to install this package is when you open the R-studio in Console
+General Instructions:
+
+Make sure you have lateset version of R-language , the way to check is
+session() . If it 0.4.7 then the Package may not be loaded. To take care
+of that is
+
+If you are R studio on Personnel drive then first Install.packages
+(“rlang”) , then library (rlang) , check sessionInfo () NOTE: If you
+are using Rstudio on cloud this may would not work , simply go to right
+most corner of the window and change the R version to 4.0 or 4.1.
+
+The way to install this package is In the R-studio in Console
 
 install.packages(“devtools”) wait for the dev tools to be installed then
 call the library(devtools). Once the devtools is installed then you can
 call install\_github(“sas2r/clinical\_fd”) to install the package
 clinical\_fd (all lower case , with the underscore in it ) then call
 library(clincalfd) (without the underscore)
+
+During the process of Installation ( May take around 10 min depending on
+the System) you will see couple of packages either been downloaded or
+updated.
+
+NOTE: Make sure you type in exactly as shown below without \# for
+install packages part
 
 ``` r
 #install.packages("devtools") 

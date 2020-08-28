@@ -6,8 +6,7 @@ s_data = tibble (x=x , y = y)
 
 usethis:: use_data (s_data , compress = "xz" )
 
-readr::write_csv(s_data ,
-path= "inst/extdata/s_data.csv")
+readr::write_csv(s_data ,path= "inst/extdata/s_data.csv")
 
 
 

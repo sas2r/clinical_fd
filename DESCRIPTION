@@ -17,9 +17,6 @@ Suggests:
     covr
 VignetteBuilder: knitr
 Imports: 
-    tibble,
-    tidyverse,
-    readr,
     dplyr,
     Hmisc
 Depends: 
